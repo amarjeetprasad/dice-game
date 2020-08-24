@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: gray;
+    text-align: center;
+}
+header h1{
+    font-size: 6rem;
+    font-family: 'Galada', cursive;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.player1{
+    margin-right: 15px;
+}
+.player2{
+    margin-left: 15px;
+}
+h3{
+    font-size: 2rem;
+    font-family: 'Merienda One', cursive;
+}
+.dice1{
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.dice2{
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+
+.text-box{
+    
+        margin-right: 12vw;
+    
+}
+@media only screen and  (max-width:900px){
+    .text-box{
+    
+        margin-right: 17vw;
+    
+ }
+ header h1{
+    font-size: 4.5rem;
+    font-family: 'Galada', cursive;
+}
+} 
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
